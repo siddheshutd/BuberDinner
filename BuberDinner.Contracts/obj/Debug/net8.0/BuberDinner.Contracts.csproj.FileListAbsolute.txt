@@ -1,0 +1,11 @@
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/bin/Debug/net8.0/BuberDinner.Contracts.deps.json
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/bin/Debug/net8.0/BuberDinner.Contracts.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/bin/Debug/net8.0/BuberDinner.Contracts.pdb
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.AssemblyInfoInputs.cache
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.AssemblyInfo.cs
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.csproj.CoreCompileInputs.cache
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/refint/BuberDinner.Contracts.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.pdb
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/ref/BuberDinner.Contracts.dll
