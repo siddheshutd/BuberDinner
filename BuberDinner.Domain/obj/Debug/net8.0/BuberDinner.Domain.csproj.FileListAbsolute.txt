@@ -9,3 +9,4 @@
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/refint/BuberDinner.Domain.dll
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/BuberDinner.Domain.pdb
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/ref/BuberDinner.Domain.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Domain/obj/Debug/net8.0/BuberDinner.Domain.sourcelink.json

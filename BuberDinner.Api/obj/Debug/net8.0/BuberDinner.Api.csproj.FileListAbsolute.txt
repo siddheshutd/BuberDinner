@@ -45,3 +45,10 @@
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Binder.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.Extensions.Options.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.sourcelink.json

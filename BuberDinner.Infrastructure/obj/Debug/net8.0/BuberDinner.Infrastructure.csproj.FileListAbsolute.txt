@@ -15,3 +15,4 @@
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Infrastructure/bin/Debug/net8.0/BuberDinner.Domain.pdb
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Infrastructure/obj/Debug/net8.0/BuberDinner.Infrastructure.csproj.AssemblyReference.cache
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Infrastructure/obj/Debug/net8.0/BuberDin.DE1B2DD7.Up2Date
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Infrastructure/obj/Debug/net8.0/BuberDinner.Infrastructure.sourcelink.json

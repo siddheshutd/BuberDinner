@@ -9,3 +9,4 @@
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/refint/BuberDinner.Contracts.dll
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.pdb
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/ref/BuberDinner.Contracts.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.sourcelink.json
