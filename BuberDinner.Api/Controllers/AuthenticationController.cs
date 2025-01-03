@@ -16,14 +16,14 @@ public class AuthenticationController : ControllerBase
     [HttpPost("register")]
     public IActionResult RegisterUser(RegisterRequest registerRequest){
         var authResult = _authenticationService.Register(registerRequest.FirstName, registerRequest.LastName, registerRequest.Email, registerRequest.Password);
-        var result = new AuthenticationResponse(authResult.Id, authResult.FirstName, authResult.LastName, authResult.Email, authResult.Password, authResult.Token);
+        var result = new AuthenticationResponse(authResult.User.UserId, authResult.User.FirstName, authResult.User.LastName, authResult.User.Email, authResult.Token);
         return Ok(result);
     }
 
     [HttpPost("login")]
     public IActionResult Login(LoginRequest loginRequest){
         var authResult = _authenticationService.Login(loginRequest.Email, loginRequest.Password);
-        var result = new AuthenticationResponse(authResult.Id, authResult.FirstName, authResult.LastName, authResult.Email, authResult.Password, authResult.Token);
+        var result = new AuthenticationResponse(authResult.User.UserId, authResult.User.FirstName, authResult.User.LastName, authResult.User.Email, authResult.Token);
         return Ok(result);
     }
 }

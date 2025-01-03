@@ -10,6 +10,8 @@ public static class DependencyInjection
         services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
+
+        services.AddSingleton<IUserRepository, UserRepository>();
         return services;
     }
 }
