@@ -91,7 +91,6 @@ public class CustomProblemDetailsFactory : ProblemDetailsFactory
             problemDetails.Extensions["traceId"] = traceId;
         }
         
-        problemDetails.Extensions.Add("customProperty", "customValue");
         _configure?.Invoke(new() { HttpContext = httpContext!, ProblemDetails = problemDetails });
     }
 }

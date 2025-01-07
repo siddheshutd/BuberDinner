@@ -1,3 +1,5 @@
+using BuberDinner.Application.common.Errors;
+
 namespace BuberDinner.Application.services.Authentication;
 
 public class AuthenticationService : IAuthenticationService
@@ -11,7 +13,7 @@ public class AuthenticationService : IAuthenticationService
     
     public AuthenticationResult Register(string firstName, string lastName, string email, string password){
         if(_userRepository.GetUserByEmail(email) is not null){
-            throw new Exception("User for this email already exists!");
+            throw new DuplicateEmailException();
         }
         var user = new User(){ Email = email, Password = password , FirstName = firstName, LastName = lastName };
         _userRepository.AddUser(user);
