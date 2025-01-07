@@ -62,3 +62,13 @@ BuberDinner.Api/bin/Debug/net8.0/BuberDinner.Application.pdb
 BuberDinner.Api/bin/Debug/net8.0/BuberDinner.Application.dll
 BuberDinner.Api/bin/Debug/net8.0/BuberDinner.Api.pdb
 BuberDinner.Api/bin/Debug/net8.0/BuberDinner.Api.dll
+BuberDinner.Infrastructure/obj/Debug/net8.0/BuberDinner.Infrastructure.AssemblyInfoInputs.cache
+BuberDinner.Infrastructure/obj/Debug/net8.0/BuberDinner.Infrastructure.AssemblyInfo.cs
+BuberDinner.Domain/obj/Debug/net8.0/BuberDinner.Domain.AssemblyInfoInputs.cache
+BuberDinner.Domain/obj/Debug/net8.0/BuberDinner.Domain.AssemblyInfo.cs
+BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.AssemblyInfoInputs.cache
+BuberDinner.Contracts/obj/Debug/net8.0/BuberDinner.Contracts.AssemblyInfo.cs
+BuberDinner.Application/obj/Debug/net8.0/BuberDinner.Application.AssemblyInfoInputs.cache
+BuberDinner.Application/obj/Debug/net8.0/BuberDinner.Application.AssemblyInfo.cs
+BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.AssemblyInfo.cs
+BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.AssemblyInfoInputs.cache
