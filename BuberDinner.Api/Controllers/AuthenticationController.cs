@@ -1,5 +1,4 @@
 using BuberDinner.Application.common.Errors;
-using BuberDinner.Application.services.Authentication;
 using BuberDinner.Contracts.Authentication;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,15 +8,17 @@ namespace BuberDinner.Api.Controllers;
 [Route("auth")]
 public class AuthenticationController : ControllerBase
 {
-    private readonly IAuthenticationService _authenticationService;
-    public AuthenticationController(IAuthenticationService authenticationService){
-        this._authenticationService = authenticationService;
+    private readonly IAuthenticationCommandService _authenticationCommandService;
+    private readonly IAuthenticationQueryService _authenticationQueryCommandService;
+    public AuthenticationController(IAuthenticationCommandService authenticationCommandService, IAuthenticationQueryService authenticationQueryService){
+        this._authenticationCommandService = authenticationCommandService;
+        this._authenticationQueryCommandService = authenticationQueryService;
     }
 
     [HttpPost("register")]
     public IActionResult RegisterUser(RegisterRequest registerRequest)
     {
-        var authResult = _authenticationService.Register(registerRequest.FirstName, registerRequest.LastName, registerRequest.Email, registerRequest.Password);
+        var authResult = _authenticationCommandService.Register(registerRequest.FirstName, registerRequest.LastName, registerRequest.Email, registerRequest.Password);
         if (authResult.IsSuccess)
         {
             return Ok(MapAuthResult(authResult.Value));
@@ -36,7 +37,7 @@ public class AuthenticationController : ControllerBase
 
     [HttpPost("login")]
     public IActionResult Login(LoginRequest loginRequest){
-        var authResult = _authenticationService.Login(loginRequest.Email, loginRequest.Password);
+        var authResult = _authenticationQueryCommandService.Login(loginRequest.Email, loginRequest.Password);
         if(authResult.IsSuccess){
             return Ok(MapAuthResult(authResult.Value));
         }
