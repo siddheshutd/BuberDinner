@@ -52,3 +52,4 @@
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.sourcelink.json
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/FluentResults.dll
