@@ -1,4 +1,5 @@
 using BuberDinner.Application.common.Errors;
+using FluentResults;
 
 namespace BuberDinner.Application.services.Authentication;
 
@@ -11,27 +12,27 @@ public class AuthenticationService : IAuthenticationService
         _userRepository = userRepository;
     }
     
-    public AuthenticationResult Register(string firstName, string lastName, string email, string password){
+    public Result<AuthenticationResult> Register(string firstName, string lastName, string email, string password){
         if(_userRepository.GetUserByEmail(email) is not null){
-            throw new DuplicateEmailException();
+            return Result.Fail(new DuplicateEmailError());
         }
         var user = new User(){ Email = email, Password = password , FirstName = firstName, LastName = lastName };
         _userRepository.AddUser(user);
 
         var token = _jwtTokenGenerator.GenerateToken(user);
-        return new AuthenticationResult(user, token);
+        return Result.Ok(new AuthenticationResult(user, token)) ;
     }
 
-    public AuthenticationResult Login(string email, string password){
+    public Result<AuthenticationResult> Login(string email, string password){
         if(_userRepository.GetUserByEmail(email) is not User user){
-            throw new Exception("User with given email does not exist!");
+            return Result.Fail(new InvalidEmailError());
         }
 
         if(user.Password != password){
-            throw new Exception("Invalid Password");
+            return Result.Fail(new InvalidPasswordError());
         }
 
         var token = _jwtTokenGenerator.GenerateToken(user);
-        return new AuthenticationResult(user, token);
+        return Result.Ok(new AuthenticationResult(user, token));
     }
 }
