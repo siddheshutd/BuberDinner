@@ -1,22 +1,24 @@
 using BuberDinner.Application.common.Errors;
 using FluentResults;
+using MediatR;
 
 namespace BuberDinner.Application.services.Authentication.Queries;
 
-public class AuthenticationQueryService : IAuthenticationQueryService
+public class LoginQueryHandler : IRequestHandler<LoginQuery, Result<AuthenticationResult>>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserRepository _userRepository;
-    public AuthenticationQueryService(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository){
+    public LoginQueryHandler(IJwtTokenGenerator jwtTokenGenerator, IUserRepository userRepository){
         _jwtTokenGenerator = jwtTokenGenerator;
         _userRepository = userRepository;
     }
-    public Result<AuthenticationResult> Login(string email, string password){
-        if(_userRepository.GetUserByEmail(email) is not User user){
+    public async Task<Result<AuthenticationResult>> Handle(LoginQuery request, CancellationToken cancellationToken)
+    {
+        if(_userRepository.GetUserByEmail(request.Email) is not User user){
             return Result.Fail(new InvalidEmailError());
         }
 
-        if(user.Password != password){
+        if(user.Password != request.Password){
             return Result.Fail(new InvalidPasswordError());
         }
 
@@ -24,3 +26,4 @@ public class AuthenticationQueryService : IAuthenticationQueryService
         return Result.Ok(new AuthenticationResult(user, token));
     }
 }
+
