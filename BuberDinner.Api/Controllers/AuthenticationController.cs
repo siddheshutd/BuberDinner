@@ -1,5 +1,5 @@
-using BuberDinner.Application.common.Errors;
 using BuberDinner.Contracts.Authentication;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuberDinner.Api.Controllers;
@@ -8,26 +8,22 @@ namespace BuberDinner.Api.Controllers;
 [Route("auth")]
 public class AuthenticationController : ControllerBase
 {
-    private readonly IAuthenticationCommandService _authenticationCommandService;
-    private readonly IAuthenticationQueryService _authenticationQueryCommandService;
-    public AuthenticationController(IAuthenticationCommandService authenticationCommandService, IAuthenticationQueryService authenticationQueryService){
-        this._authenticationCommandService = authenticationCommandService;
-        this._authenticationQueryCommandService = authenticationQueryService;
+    private readonly IMediator _mediator;
+    public AuthenticationController(IMediator mediator){
+        _mediator = mediator;
     }
 
     [HttpPost("register")]
-    public IActionResult RegisterUser(RegisterRequest registerRequest)
+    public async Task<IActionResult> RegisterUser(RegisterRequest registerRequest)
     {
-        var authResult = _authenticationCommandService.Register(registerRequest.FirstName, registerRequest.LastName, registerRequest.Email, registerRequest.Password);
-        if (authResult.IsSuccess)
-        {
+        var register = new RegisterCommand(registerRequest.FirstName, registerRequest.LastName, registerRequest.Email, registerRequest.Password);
+
+        var authResult = await _mediator.Send(register); 
+        if(authResult.IsSuccess){
             return Ok(MapAuthResult(authResult.Value));
         }
         var error = authResult.Errors.FirstOrDefault();
-        if(error is DuplicateEmailError){
-            return Problem(statusCode: StatusCodes.Status409Conflict, detail: error.Message);
-        }
-        return Problem();
+        return Problem(statusCode: StatusCodes.Status409Conflict, title: error?.Message);   
     }
 
     private static AuthenticationResponse MapAuthResult(AuthenticationResult authResult)
@@ -36,8 +32,9 @@ public class AuthenticationController : ControllerBase
     }
 
     [HttpPost("login")]
-    public IActionResult Login(LoginRequest loginRequest){
-        var authResult = _authenticationQueryCommandService.Login(loginRequest.Email, loginRequest.Password);
+    public async Task<IActionResult> Login(LoginRequest loginRequest){
+        var login = new LoginQuery(loginRequest.Email, loginRequest.Password);
+        var authResult = await _mediator.Send(login);
         if(authResult.IsSuccess){
             return Ok(MapAuthResult(authResult.Value));
         }
