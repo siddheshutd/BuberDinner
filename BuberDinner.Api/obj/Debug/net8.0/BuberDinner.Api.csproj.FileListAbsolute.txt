@@ -57,3 +57,6 @@
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.pdb
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/BuberDinner.Api.genruntimeconfig.cache
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/obj/Debug/net8.0/ref/BuberDinner.Api.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.Core.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.DependencyInjection.dll
