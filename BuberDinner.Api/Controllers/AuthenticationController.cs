@@ -1,6 +1,8 @@
 using BuberDinner.Contracts.Authentication;
+using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Win32;
 
 namespace BuberDinner.Api.Controllers;
 
@@ -9,34 +11,31 @@ namespace BuberDinner.Api.Controllers;
 public class AuthenticationController : ControllerBase
 {
     private readonly IMediator _mediator;
-    public AuthenticationController(IMediator mediator){
+    private readonly IMapper _mapper;
+    public AuthenticationController(IMediator mediator, IMapper mapper){
         _mediator = mediator;
+        _mapper = mapper;
     }
 
     [HttpPost("register")]
     public async Task<IActionResult> RegisterUser(RegisterRequest registerRequest)
     {
-        var register = new RegisterCommand(registerRequest.FirstName, registerRequest.LastName, registerRequest.Email, registerRequest.Password);
+        var register = _mapper.Map<RegisterCommand>(registerRequest);
 
         var authResult = await _mediator.Send(register); 
         if(authResult.IsSuccess){
-            return Ok(MapAuthResult(authResult.Value));
+            return Ok(_mapper.Map<AuthenticationResponse>(authResult.Value));
         }
         var error = authResult.Errors.FirstOrDefault();
         return Problem(statusCode: StatusCodes.Status409Conflict, title: error?.Message);   
     }
 
-    private static AuthenticationResponse MapAuthResult(AuthenticationResult authResult)
-    {
-        return new AuthenticationResponse(authResult.User.UserId, authResult.User.FirstName, authResult.User.LastName, authResult.User.Email, authResult.Token);
-    }
-
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest loginRequest){
-        var login = new LoginQuery(loginRequest.Email, loginRequest.Password);
+        var login = _mapper.Map<LoginQuery>(loginRequest);
         var authResult = await _mediator.Send(login);
         if(authResult.IsSuccess){
-            return Ok(MapAuthResult(authResult.Value));
+            return Ok(_mapper.Map<AuthenticationResponse>(authResult.Value));
         }
         if(authResult.Errors.Any()){
             var error = authResult.Errors.FirstOrDefault();

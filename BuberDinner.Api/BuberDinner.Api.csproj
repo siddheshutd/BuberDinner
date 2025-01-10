@@ -6,6 +6,8 @@
     <UserSecretsId>8aa2aabe-4cdd-46d8-a7c7-322cb0648b4f</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
   <ItemGroup>
