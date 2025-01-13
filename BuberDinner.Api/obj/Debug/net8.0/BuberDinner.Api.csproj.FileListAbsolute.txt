@@ -60,3 +60,6 @@
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.dll
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.Core.dll
 /Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/Mapster.DependencyInjection.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/FluentValidation.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
+/Users/Paycheck Essentials/ASP.NET Core/BuberDinner/BuberDinner.Api/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll
