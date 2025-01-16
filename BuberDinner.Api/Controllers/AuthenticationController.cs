@@ -1,13 +1,14 @@
 using BuberDinner.Contracts.Authentication;
 using MapsterMapper;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Win32;
 
 namespace BuberDinner.Api.Controllers;
 
 [ApiController]
 [Route("auth")]
+[AllowAnonymous] //Skips authorization for this whole controller
 public class AuthenticationController : ControllerBase
 {
     private readonly IMediator _mediator;
