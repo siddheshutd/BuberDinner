@@ -18,7 +18,7 @@ class Menu
     "hostId": "00000000-0000-0000-0000-000000000000",
     "dinnerIds": ["00000000-0000-0000-0000-000000000000"],
     "menuReviewIds": ["00000000-0000-0000-0000-000000000000"],
-    "name": "Dinner Name",
+    "name": "Menu Name",
     "description": "Some Description",
     "averageRating": 4.5,
     "sections":[
