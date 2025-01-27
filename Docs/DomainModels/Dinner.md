@@ -21,16 +21,28 @@ class Dinner
     "description": "Some Description",
     "reservations": [
         {
-            "dinnerId": "00000000-0000-0000-0000-000000000000",
+            "id": "00000000-0000-0000-0000-000000000000",
             "guestId": "00000000-0000-0000-0000-000000000000",
             "billId": "00000000-0000-0000-0000-000000000000",
-            "checkedIn": true
+            "checkedIn": true,
+            "guestCount": 2,
+            "arrivalDateTime": null,
+            "createdDateTime": "2020-01-01T00:00:00.0000000Z",
+            "updatedDateTime": "2020-01-01T00:00:00.0000000Z"
         }
     ],
     "status": "In-Progress",
-    "createdOn": "",
-    "createdBy": "",
-    "modifiedOn": "",
-    "modifiedBy": ""
+    "startDateTime": "2020-01-01T00:00:00.0000000Z",
+    "endDateTime": "2020-01-01T00:00:00.0000000Z",
+    "startedDateTime": null,
+    "endedDateTime": null,
+    "isPublic": true,
+    "maxGuests": 10,
+    "price": {
+        "amount": 10.99,
+        "currency": "USD"
+    },
+    "createdOn": "2020-01-01T00:00:00.0000000Z",
+    "modifiedOn": "2020-01-01T00:00:00.0000000Z"
 }
 ```
