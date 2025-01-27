@@ -14,15 +14,11 @@ class User
 ```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
-    "hostId": "00000000-0000-0000-0000-000000000000",
-    "guestId": "00000000-0000-0000-0000-000000000000",
-    "name": "Dinner Name",
-    "age": 24,
-    "locationDetails": {},
-    "userType": 1,
-    "createdOn": "",
-    "createdBy": "",
-    "modifiedOn": "",
-    "modifiedBy": ""
+    "firstName": "Tiffany",
+    "lastName": "Doe",
+    "email": "user@gmail.com",
+    "password": "Amiko1232!",
+    "createdOn": "2020-01-01T00:00:00.0000000Z",
+    "modifiedOn": "2020-01-01T00:00:00.0000000Z"
 }
 ```
