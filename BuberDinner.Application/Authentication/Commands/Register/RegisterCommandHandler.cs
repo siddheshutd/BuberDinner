@@ -16,7 +16,7 @@ public class RegisterCommandHandler : IRequestHandler<RegisterCommand, Result<Au
         if(_userRepository.GetUserByEmail(request.Email) is not null){
             return Result.Fail(new DuplicateEmailError());
         }
-        var user = new User(){ Email = request.Email, Password = request.Password , FirstName = request.FirstName, LastName = request.LastName };
+        var user = User.Create(request.FirstName, request.LastName,request.Email,request.Password);
         _userRepository.AddUser(user);
 
         var token = _jwtTokenGenerator.GenerateToken(user);
